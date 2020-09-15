@@ -1,4 +1,4 @@
-![Creando nuestra primera aplicación multiplataforma con Ionic 4](https://github.com/dcarvajal7/helloWorldIonic4/blob/master/unnamed.png?raw=true)
+![Creando nuestra primera aplicación multiplataforma con Ionic 4](https://github.com/dcarvajal7/examples/blob/master/ionic4/helloWorldIonic4/unnamed.png?raw=true)
 
 **Creando nuestra primera aplicación multiplataforma con Ionic 4**
 
