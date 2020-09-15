@@ -1,0 +1,13 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>album</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngIf="information">
+    <ion-card-content text-center>
+      {{information.title}}
+    </ion-card-content>
+  </ion-card>
+</ion-content>

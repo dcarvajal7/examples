@@ -1,0 +1,26 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Track By Example
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">trackByExample</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container">
+    <ul>
+      <li *ngFor="let item of collection;">{{item.id}}</li>
+    </ul>
+    <ul>
+      <li *ngFor="let item of collection; trackBy: trackByFn">{{item.id}}</li>
+    </ul>
+  </div>
+
+  <ion-button color="primary" expand="full" (click)="getItems()">Recarga de datos</ion-button>
+</ion-content>
