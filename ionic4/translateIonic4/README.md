@@ -1,4 +1,4 @@
-![Internacionalización de aplicaciones Ionic 4](https://github.com/dcarvajal7/translateIonic4/blob/master/translate.png)
+![Internacionalización de aplicaciones Ionic 4](https://github.com/dcarvajal7/examples/blob/master/ionic4/translateIonic4/translate.png?raw=true)
 
 **Internacionalización de aplicaciones Ionic 4**
 
