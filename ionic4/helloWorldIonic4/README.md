@@ -1,6 +1,8 @@
 # Creando nuestra primera aplicación multiplataforma con Ionic 4 #
 
-![Creando nuestra primera aplicación multiplataforma con Ionic 4](https://github.com/dcarvajal7/examples/blob/master/ionic4/helloWorldIonic4/unnamed.png?raw=true)
+<p align="center">
+  <img src="https://github.com/dcarvajal7/examples/blob/master/ionic4/helloWorldIonic4/unnamed.png" width="800">
+</p>
 
 El concepto de aplicación multiplataforma, lleva mucho tiempo en el mundo del desarrollo y uno de los frameworks más utilizados para aplicaciones de movilidad es sin duda Ionic.
 
