@@ -90,7 +90,7 @@ Aquí una comparativa de las 2 ejecuciones:
 
 Hello world con ‘ionic serve’
 <p align="center">
-  <img src="https://github.com/dcarvajal7/examples/blob/master/ionic4/assets/Captura.png" width="300">
+  <img src="https://github.com/dcarvajal7/examples/blob/master/ionic4/assets/Captura-3-1024x511.png" width="300">
 </p>
 Hello world con ‘ionic serve –lab’
 <p align="center">
