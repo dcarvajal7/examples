@@ -9,8 +9,9 @@ Una de las principales características de Ionic 4 con respecto a la versión an
 
 La navegación en Ionic 3, se basa en un ‘stack de vistas’, donde se cargan las páginas en una pila, en la que cada página nueva entra con un ‘push’ y se añade sobre la pila. Si queremos volver atrás, hace un ‘pop’ de la última página y la elimina de la pila.
 
-
-
+<p align="center">
+  <img src="https://github.com/dcarvajal7/examples/blob/master/ionic4/assets/ionic3stack.png" width="300">
+</p>
 
 En la versión 4 de Ionic, la navegación es un poco diferente, ya que todo el proceso es gestionado por el propio Angular Router. Se encarga de gestionar el ciclo de vida de cada página y mostrar la que necesitamos en cada momento. Para ello, debemos indicar las diferentes rutas que tendremos en la aplicación y a qué página o componente están asociadas de forma que, cuando lo necesitemos, Angular Router pueda cargar internamente cada una en nuestra aplicación.
 
@@ -20,8 +21,9 @@ Tenemos que saber que todas las páginas, están obligatoriamente asociadas a un
 
 Para los históricos, a diferencia de la navegación lineal convencional, podemos mantener más de una pila e intercambiarlas si lo necesitamos. Esto es necesario por ejemplo, cuando tenemos navegación por ‘tabs’ en una página y en otra ‘side menu’ y queremos añadir la funcionalidad ‘back’ en ambas líneas.
 
-
-
+<p align="center">
+  <img src="https://github.com/dcarvajal7/examples/blob/master/ionic4/assets/Esquema-Angular-Router.png" width="300">
+</p>
 
 Por supuesto, estamos utilizando en este artículo Angular como framework base, y por ello, usamos Angular Router, pero recordad que a partir de Ionic 4 esto no tiene porque ser así y podemos utilizar otros frameworks en lugar de Angular.
 
@@ -71,7 +73,6 @@ Con respecto al paso de parámetros, en anteriores versiones de Ionic, podíamos
 ## Navegación con router link o a través del controlador ##
 A continuación, vamos a crear 2 nuevos botones en home.page.html. para poder dirigirnos a la nueva página, uno a través del controlador y otro directamente con routeLink:
 
-
 ```
 <ion-content>
   <div class="ion-padding">
@@ -109,8 +110,9 @@ export class HomePage {
  
 ¿Cuándo debemos usar uno u otro?, depende lo que necesitemos, es posible que tengamos que añadir cierta lógica procesada antes de cambiar de página, por ejemplo buscar un elemento a través de servicios o realizar cualquier operación con los datos, para ello siempre tendremos que pasar por el controlador.
 
-
-
+<p align="center">
+  <img src="https://github.com/dcarvajal7/examples/blob/master/ionic4/assets/Angular-router-route-link-.gif" width="300">
+</p>
 
 ## Back button ##
 Diría que necesitamos un botón back para volver ¿no?, esta utilidad es muy fácil de incluir en Ionic, tan solo tenemos que añadir en la user.page.html:
@@ -128,8 +130,9 @@ Diría que necesitamos un botón back para volver ¿no?, esta utilidad es muy f�
  
 Tenemos muchas opciones de configuración, en la documentación oficial podéis ver algunas. Es importante remarcar, el gran trabajo que hay en la construcción de este framework con detalles tan importantes como que si usamos el ‘back button’ sin ‘customizar’, dependiendo del sistema donde se este ejecutando nuestra aplicación, aparece el botón nativo de cada sistema:
 
-
-
+<p align="center">
+  <img src="https://github.com/dcarvajal7/examples/blob/master/ionic4/assets/back-button.gif" width="300">
+</p>
 
 ## Pasando parámetros entre páginas con Angular Router ##
 Otro de los puntos importantes de la navegación con Angular Router (y con cualquier sistema de navegación), es el paso de parámetros entre páginas, de esta forma, por ejemplo, podremos pasar él id de un elemento para mostrar su detalle o pasar a una página de búsqueda con el texto a buscar directamente, etcétera. La forma de hacerlo, es muy fácil, debemos definir el parámetro a pasar en nuestro ‘router’:
@@ -235,8 +238,9 @@ export class HomePage {
 }
 ```
 
-
-
+<p align="center">
+  <img src="https://github.com/dcarvajal7/examples/blob/master/ionic4/assets/Uso-de-activate-route-1.gif" width="300">
+</p>
 
 ## Protegiendo páginas con Guard ##
 Una de las formas que tenemos de proteger o prevenir el acceso a páginas dependiendo del usuario y sus permisos, a través de la url, es con el uso de ‘Guard‘.
