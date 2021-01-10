@@ -1,6 +1,6 @@
-**Desarrollo de aplicaciones multiplataformas: nativas, híbridas y web**
+# Desarrollo de aplicaciones multiplataformas: nativas, híbridas y web #
 
-*¿Qué son las aplicaciones multiplataformas?*
+## ¿Qué son las aplicaciones multiplataformas? ##
 
 Una aplicación multiplataforma, es la que con un único desarrollo, se puede desplegar en distintas plataformas, esto es posible gracias a tecnologías como Apache Cordova, Ionic Capacitor o Appcelerator para desarrollos ‘mobile’ o Unity para videojuegos.
 
@@ -12,13 +12,13 @@ Esta claro que podemos desarrollar aplicaciones nativas para todas las plataform
 
 Normalmente, con la mayoría de frameworks y herramientas multiplataforma disponibles en internet, podremos cubrir un alto porcentaje de las necesidades de nuestra idea, pero no llega a ser el 100%, habrá casos en los que tendremos que tirar de desarrollos nativos ya sea por rendimiento, por elementos nativos, interfaz de usuario, etcétera.
 
-*Aplicaciones Nativas, Híbridas o Web*
+## Aplicaciones Nativas, Híbridas o Web ##
 
 Cuando decidimos generar una nueva aplicación, son muchos los factores a tener en cuenta antes de empezar a picar código, de hecho, elegir el tipo de aplicación (estructuralmente hablando) es uno de los puntos más importantes del desarrollo, ya que no se puede cambiar a ‘posteriori’ sin tirar lo que hemos hecho a la basura.
 
 Las 3 opciones son muy diferentes, por lo que tenemos que elegir con cuidado dado que como he dicho antes, una vez empezado no podremos cambiar sin tirar todo el trabajo realizado. Vamos a analizar las opciones:
 
-*Nativas*
+## Nativas ##
 
 Una aplicación nativa siempre nos provee la mejor interfaz posible ya que cuenta con todos los componentes nativos, creados para ese sistema lo cual aporta también un rendimiento muy optimizado, incluso enfocado al hardware como es el caso de los iPhone con iOS, en cambio el coste en recursos y tiempo es mucho mayor. Otra de las cosas que aporta es el modo offline, ejecutar una bbdd local o comunicarse con la memoria interna es realmente sencillo y la integración es perfecta.
 
@@ -28,7 +28,7 @@ En el desarrollo de aplicaciones nativas se utiliza directamente el lenguaje ‘
   <img src="https://github.com/dcarvajal7/examples/blob/master/ionic4/assets/estructura-nativas.png" width="200">
 </p>
 
-*Híbridas*
+## Híbridas ##
 
 Las híbridas en cambio cuentan con una interfaz bastante buena ya que HTML5 nos provee de una gran variedad de componentes que van a cubrir a la perfección todas nuestras necesidades y al estar alojado parte de la lógica y las vistas (assets + código) en la propia aplicación, es decir en local, el rendimiento es bueno. En cuanto al coste, es más liviano que el de las nativas, solo tenemos que desarrollar una ‘app’ para todos los sistemas y en un lenguaje muy conocido, por lo que abaratamos recursos y tiempo.
 
@@ -40,7 +40,7 @@ Aquí la estructura es bastante más compleja ya que se requiere de un contenedo
   <img src="https://github.com/dcarvajal7/examples/blob/master/ionic4/assets/estructura-hibridas.png" width="200">
 </p>
 
-*Web*
+## Web ##
 
 Por ultimo, las aplicaciones web cuentan con los mismos componentes que las híbridas para montar la interfaz de usuario pero el acceso al hardware del dispositivo es mucho más limitado y dependemos directamente de si nuestro navegador tiene esa integración. El rendimiento también es peor ya que todo se aloja en servidores y la carga de assets y código viene desde un servidor, en local no tenemos nada, lo que hace algo más pesada la carga de elementos.
 
@@ -52,7 +52,7 @@ Al ejecutarse sobre el navegador web del dispositivo, no tiene comunicación con
   <img src="https://github.com/dcarvajal7/examples/blob/master/ionic4/assets/estructura-web.png" width="200">
 </p>
 
-*Conclusiones*
+## Conclusiones ##
 
 Personalmente, no pienso que debamos ceñirnos a un tipo de aplicación y creo que debemos elegir en base a nuestras necesidades, siempre y cuando tengamos el conocimiento necesario para implantar cualquiera de las 3 opciones, si no conocemos el lenguaje nativo, me quedaría con híbridas o web.
 
