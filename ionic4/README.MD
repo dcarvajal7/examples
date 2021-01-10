@@ -1,5 +1,9 @@
 # Desarrollo de aplicaciones multiplataformas: nativas, híbridas y web #
 
+<p align="center">
+  <img src="https://github.com/dcarvajal7/examples/blob/master/ionic4/assets/HvsNvsW-1024x683.png" width="800">
+</p>
+
 ## ¿Qué son las aplicaciones multiplataformas? ##
 
 Una aplicación multiplataforma, es la que con un único desarrollo, se puede desplegar en distintas plataformas, esto es posible gracias a tecnologías como Apache Cordova, Ionic Capacitor o Appcelerator para desarrollos ‘mobile’ o Unity para videojuegos.
