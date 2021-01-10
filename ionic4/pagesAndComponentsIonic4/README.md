@@ -15,14 +15,13 @@ Debemos entender como página en angular a un elemento encapsulado que normalmen
 
 Los componentes son la unidad más básica en la construcción de una aplicación Angular. En realidad una aplicación Angular es un árbol de componentes y probablemente nuestras páginas estén formadas por distintos componentes (entre otras cosas). Deben producirse también de forma encapsulada y auto-suficiente, de manera que podamos reutilizarlos en toda la aplicación.
 
-
+<p align="center">
+  <img src="https://github.com/dcarvajal7/examples/blob/master/ionic4/assets/paginasYcomponentes-1-509x1024.png" width="300">
+</p>
 
 La idea es que todas las páginas y componentes sean elementos desacoplados y que puedas reutilizar con poco esfuerzo, normalmente con algunos parámetros de entrada, hay que huir en la medida de lo posible a dependencias con su contenedor.
 
 Gracias a Ionic CLI podremos crear páginas y componentes nuevos en Ionic 4 de una forma muy sencilla. La versión 4.0 ha sido vitaminada (con respecto a la versión anterior) en las funcionalidades que ofrece y en la velocidad para procesarlas. También han mejorado su facilidad de uso.
-
-
-
  
 Ya hemos visto como crear nuestra primera aplicación Ionic y en este artículo vamos a dar un pasito más en la creación de nuestra aplicación multiplataforma. Si no tenemos la última versión de Ionic, podemos actualizarla con:
 
@@ -37,12 +36,11 @@ Vamos a crear una página con información sobre nuestra mascota, por lo que a c
 
 `ionic g page pet`
 
-
-
 La estructura de nuestra página con respecto a la aplicación queda de la siguiente manera:
 
-
-
+<p align="center">
+  <img src="https://github.com/dcarvajal7/examples/blob/master/ionic4/assets/estructura-nueva-pagina-ionic-4.png" width="300">
+</p>
 
 Se ha creado una nueva carpeta dentro de ‘app’ con 5 elementos nuevos y se ha modificado el fichero app-routing.module.ts, este último es general y esta ubicado directamente dentro del raíz de ‘app’:
 
@@ -51,9 +49,11 @@ Se ha creado una nueva carpeta dentro de ‘app’ con 5 elementos nuevos y se h
 * pet.page.scss – Estilos únicos para la página, en caso de ser necesarios. Este fichero es más útil en los componentes.
 * pet.page.spect.ts – Se utiliza para testing, por lo que queda fuera del alcance de este artículo.
 * pet.page.ts – Aquí se encuentra la lógica de la página, es donde estableceremos los parámetros de entrada (si los tiene) y qué hacer con ellos. Además de todo el comportamiento de la página, incluido llamadas a servicios.
-app-routing.module.ts – No pertenece a la página, si no que es global, contiene toda la definición de la navegación (Angular Router).
+* app-routing.module.ts – No pertenece a la página, si no que es global, contiene toda la definición de la navegación (Angular Router).
 
-
+<p align="center">
+  <img src="https://github.com/dcarvajal7/examples/blob/master/ionic4/assets/PaginaIonic4-287x300.png" width="300">
+</p>
 
 Adicionalmente, para que podamos ver nuestra página, vamos a incluir un enlace en la ‘Home’ usando Angular Router, aunque esto queda fuera del alcance de este artículo, home.page.ts quedaría así:
 
@@ -115,8 +115,9 @@ Podemos probar lo que llevamos desarrollado utilizando de nuevo Ionic CLI:
 
 Tenéis más información sobre la opción ‘–lab’ en el artículo publicado en esta mismo repositorio donde explicamos el proceso de creación desde 0 de una aplicación con Ionic 4.
 
-
-
+<p align="center">
+  <img src="https://github.com/dcarvajal7/examples/blob/master/ionic4/assets/home-page-tutorial-pag-comp.gif" width="300">
+</p>
 
 Ya tenemos creada nuestra primera página con Ionic 4, fácil, ¿verdad? Importante añadir la navegación, para poder visitarla y tener en cuenta que acabamos de crear una página en blanco, a la que a continuación vamos a añadir contenido con el siguiente punto del artículo, nuestro primer componente.
 
@@ -126,20 +127,17 @@ En desarrollo web se utilizan los componentes de HTML, pero son componentes muy 
 Imagina que para nuestra aplicación personal, donde ya hemos creado una página para la mascota, ahora queremos una página para el dueño:
 
 `ionic g page owner`
-De manera que ahora tenemos 2 páginas y al igual que antes, añadimos un nuevo botón con su navegación (al final del artículo encontrarás un enlace al código fuente completo):
+De manera que ahora tenemos 2 páginas y al igual que antes, añadimos un nuevo botón con su navegación:
 
-
-
+<p align="center">
+  <img src="https://github.com/dcarvajal7/examples/blob/master/ionic4/assets/home-page-tutorial-pag-comp-2.gif" width="300">
+</p>
 
 Y ahora queremos que en la primera linea de la página aparezca algo como ‘Nombre: [Nombre en texto]’ para identificar el nombre tanto de nuestra mascota, como el nuestro, para ello será necesario crear un componente con esta estructura que podamos reutilizar en las 2 páginas. De esta forma tendremos un único desarrollo para reutilizarlo tantas veces como queramos.
 
 Por supuesto, este es un ejemplo muy simple y en la practica es posible que no sea necesario crear componentes tan simples, pero el componente puede ser tan potente como queramos, por ejemplo, un calendario, una barra de selección o un árbol de tags, puedes utilizar incluso componentes dentro de componentes, las posibilidades son infinitas.
-
-
  
 Para crear nuestro primer componente usaremos el CLI de la siguiente forma:
-
-
  
 `ionic g module components
 ionic g component components/nombre --export`
@@ -147,10 +145,11 @@ Lo que hemos hecho con estos dos comandos es crear primero un modulo nuevo, que 
 
 Para nosotros en este artículo bastará con un solo módulo con nuestro componente y lo añadiremos en cada página para poder utilizarlo.
 
-
-
-
 Esta vez tenemos un modulo nuevo ‘components’ cuya configuración se establece en componente.module.ts y dentro de este modulo, nuestro componente:
+
+<p align="center">
+  <img src="https://github.com/dcarvajal7/examples/blob/master/ionic4/assets/estructura-nueva-componente-ionic-4.png" width="300">
+</p>
 
 * components.module.ts – Además de lo explicado antes en pet.module.ts, definimos que componentes contiene el módulo y cuales se exportan para poder usarlo fuera.
 * nombre/nombre.component.html – Como hemos comentado anteriormente aquí va la vista en sí del componente, página o lo que toque.
@@ -158,7 +157,9 @@ Esta vez tenemos un modulo nuevo ‘components’ cuya configuración se estable
 * nombre/nombre.component.spec.ts – Testing del propio componente, queda fuera del alcance de este artículo.
 * nombre/nombre.component.ts – Es el controlador del componente y contiene toda la lógica interna del mismo.
 
-
+<p align="center">
+  <img src="https://github.com/dcarvajal7/examples/blob/master/ionic4/assets/ComponenteIonic4-287x300.png" width="300">
+</p>
 
 Lo que debemos hacer primero, es adaptar nuestro components.module.ts, necesitamos que exporte el componente cuando incluyamos este modulo en las demás páginas o módulos, únicamente tenemos que declarar y exportar NombreComponent en @NgModule:
 
@@ -252,8 +253,9 @@ Simplemente bastará con importar ComponentsModule en el módulo de nuestra pág
 
 La forma de incluir el componente en la vista es muy fácil, solo debemos incluirlo con el nombre definido en el parámetro selector (dentro de @component) como una etiqueta HTML más. Cada @Input es un parámetro de entrada al componente y se establecen como los atributos a los que estamos acostumbrados en HTML (por ejemplo atributo ‘class’ de un ‘div’).
 
-
-
+<p align="center">
+  <img src="https://github.com/dcarvajal7/examples/blob/master/ionic4/assets/home-page-tutorial-pag-comp-3.gif" width="300">
+</p>
 
 Ya tenemos lista nuestra aplicación con dos páginas, ademas del ‘Home’, y un componente compartido entre ellas. También hemos visto cómo incluir un parámetro de entrada en un componente ‘custom’ y como utilizarlo.
 
