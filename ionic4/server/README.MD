@@ -1,5 +1,9 @@
 # Uso de servidores en aplicaciones ejecutadas en cliente #
 
+<p align="center">
+  <img src="https://github.com/dcarvajal7/examples/blob/master/ionic4/assets/banner-1.png" width="800">
+</p>
+
 ## Introducción ##
 Las razones para utilizar un servidor remoto en una aplicación que se ejecuta en cliente son muchas y dependen de muchos factores que vamos a tratar en este artículo. Pero primero, ¿qué es una aplicación que se ejecuta en cliente?
 
@@ -17,8 +21,9 @@ Por ejemplo Angular, te permite crear aplicaciones completas para ejecutarlas en
 
 Como punto negativo, siempre implementar dos aplicaciones en lugar de una, tiene un coste mayor y debemos pensar si realmente el usuario necesita estas características.
 
-
-
+<p align="center">
+  <img src="https://github.com/dcarvajal7/examples/blob/master/ionic4/assets/Esquema-no-server.png" width="300">
+</p>
 
 ## ¿Cuándo debemos utilizar un servidor remoto? ##
 Los siguientes puntos son validos para aplicaciones que, o bien se ejecutan íntegramente en servidor o bien mantienen un patrón frontend-backend, ya sean aplicaciones móviles, de escritorio, web, etcétera como veremos más adelante en este mismo artículo.
@@ -42,8 +47,9 @@ En una aplicación ejecutada íntegramente en servidor (JSF, PHP, JSP, ….) no 
 
 También existen excepciones, como por ejemplo los juegos móviles, donde prácticamente todo se ejecuta de lado del cliente, ya que la tasa de refresco debe ser inmediata, por lo que la comunicación con el servidor se relega a funciones como la comunicado en el juego online o guardado de datos en la nube. En este caso, dependemos directamente del hardware del dispositivo donde se ejecuta, que en la mayoría de casos estará fuera de nuestro control, por lo que las labores de optimización deben ser muy finas.
 
-
-
+<p align="center">
+  <img src="https://github.com/dcarvajal7/examples/blob/master/ionic4/assets/Esquema-server.png" width="300">
+</p>
 
 ## Frontend y Backend ##
 Cada vez es más común ver diferentes proyectos que se comunican entre sí, con diferentes funcionalidades:
@@ -68,8 +74,9 @@ Gracias a tecnologías como Angular, podemos crear aplicaciones increíbles con 
 
 Al igual que gracias a tecnologías como Spring, podemos crear aplicaciones backend seguras, solidas y robustas con una lógica de negocio bien construida.
 
-
-
+<p align="center">
+  <img src="https://github.com/dcarvajal7/examples/blob/master/ionic4/assets/Esquema.png" width="300">
+</p>
 
 ## Conclusiones ##
 Para mí, no es tan importante el nombre que le pongamos a los mecanismos que utilizamos para desarrollar nuestra aplicación, como que tengamos conocimientos de que existen y de usar el que mejor nos valga en cada momento.
