@@ -13,7 +13,9 @@ Ngx-translate es una librería de angular que nos va a permitir gestionar nuestr
 
 Podemos utilizarla en base al idioma definido en los ajustes del dispositivo o cambiar de idioma en la propia aplicación.
 
-
+<p align="center">
+  <img src="https://github.com/dcarvajal7/examples/blob/master/ionic4/assets/diagrama.png" width="600">
+</p>
 
 
 ## Instalación y uso ##
@@ -49,6 +51,10 @@ fr.json (Francés)
     }
 }
 ```
+
+<p align="center">
+  <img src="https://github.com/dcarvajal7/examples/blob/master/ionic4/assets/Captura-de-pantalla-2019-11-17-a-las-18.30.40.png" width="600">
+</p>
 
 Como veis, incluso se pueden anidar traducciones, algo altamente recomendable para tener organizado nuestras traducciones por módulo. Cómo hemos creado la aplicación con el ‘starter’ Tab, vamos a aplicar nuestra traducción en la página 2, por tanto lo modulamos también en nuestras traducciones.
 
@@ -227,7 +233,9 @@ export class Tab2Page {
 
 Hecho esto, ya tenemos 3 formas diferentes de obtener las traducciones almacenadas en los ficheros jSON gracias al uso de este plugin.
 
-
+<p align="center">
+  <img src="https://github.com/dcarvajal7/examples/blob/master/ionic4/assets/Nov-17-2019-18-25-27.gif" width="600">
+</p>
 
 
 ## Crear un servicio para gestionar NGX-Translate en Ionic 4 ##
