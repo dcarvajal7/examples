@@ -24,7 +24,9 @@ Una aplicación nativa siempre nos provee la mejor interfaz posible ya que cuent
 
 En el desarrollo de aplicaciones nativas se utiliza directamente el lenguaje ‘oficial’ del sistema operativo para el que son desarrolladas, utilizando el SDK (Software Development Kit) especifico de cada sistema. La comunicación con la API del dispositivo es directa gracias al SDK y está perfectamente integrada
 
-![Nativas](https://github.com/dcarvajal7/examples/blob/master/ionic4/assets/estructura-nativas.png?raw=true)
+<p align="center">
+  <img src="https://github.com/dcarvajal7/examples/blob/master/ionic4/assets/estructura-nativas.png" width="200">
+</p>
 
 *Híbridas*
 
@@ -34,7 +36,9 @@ En cuanto al modo offline, es algo menos eficiente que el de las nativas, aunque
 
 Aquí la estructura es bastante más compleja ya que se requiere de un contenedor nativo sobre el que se ejecuta nuestra aplicación y además es quien se comunica con la API. Cordova o Ionic Capacitor nos proveen de ese contenedor capaz de ejecutarse en el S.O. nativo
 
-![Híbridas](https://github.com/dcarvajal7/examples/blob/master/ionic4/assets/estructura-hibridas.png?raw=true)
+<p align="center">
+  <img src="https://github.com/dcarvajal7/examples/blob/master/ionic4/assets/estructura-hibridas.png" width="200">
+</p>
 
 *Web*
 
@@ -44,7 +48,9 @@ Sin embargo es el tipo que menos coste tiene, no debes tener conocimientos sobre
 
 Al ejecutarse sobre el navegador web del dispositivo, no tiene comunicación con la API salvo la que el propio navegador tenga, ya sea Safari, Chrome, etcétera
 
-![Web](https://github.com/dcarvajal7/examples/blob/master/ionic4/assets/estructura-web.png?raw=true)
+<p align="center">
+  <img src="https://github.com/dcarvajal7/examples/blob/master/ionic4/assets/estructura-web.png" width="200">
+</p>
 
 *Conclusiones*
 
