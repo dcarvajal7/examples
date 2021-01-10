@@ -1,5 +1,9 @@
 # Cache en el desarrollo de aplicaciones #
 
+<p align="center">
+  <img src="https://github.com/dcarvajal7/examples/blob/master/ionic4/assets/banner.png" width="800">
+</p>
+
 ## Introducción ##
 La optimización de nuestros desarrollos puede ser crucial para una experiencia de usuario óptima. En este artículo vamos a tratar una de las técnicas de optimización más eficaces en el mundo del desarrollo y que mi experiencia dice me dice, que muchas veces no se tiene en cuenta, al menos de la manera correcta.
 
@@ -17,8 +21,9 @@ Probablemente, estos tipos de cache son auto-gestionados por la propia librería
 
 Por supuesto, existen técnicas de actualización para cada librería desde una escritura externa, aunque tendremos que tenerlo en cuenta cada vez que desarrollemos estas escrituras. Es ideal que se utilice este tipo de cache debido a que normalmente las bases de datos se ubican en un único servidor y cuantas más lecturas se realicen de forma simultánea, más posibilidades tenemos de sobrecargar nuestra base de datos y sí, nos limita a utilizar una misma librería si no queremos complicarnos demasiado, pero creo que por homogeneizar la arquitectura lo veo correcto, a parte que como ya he comentado antes, existen mecanismos para poder refrescar esta cache de forma externa a nuestra librería.
 
-
-
+<p align="center">
+  <img src="https://github.com/dcarvajal7/examples/blob/master/ionic4/assets/bbdd.png" width="600">
+</p>
 
 #### Cache de servicios ####
 
@@ -28,8 +33,9 @@ Por ello, él sacar los datos hacia el usuario final puede ser tedioso y requeri
 
 Por ejemplo un listado de categorías por las que un usuario puede crear artículos, teniendo en cuenta que ese listado varía conforme a los permisos de usuario, pero que raramente se añadirán categorías nuevas. A esta cache le pondríamos una expiración larga y un refresco cuando se modifiquen los permisos de cada usuario.
 
-
-
+<p align="center">
+  <img src="https://github.com/dcarvajal7/examples/blob/master/ionic4/assets/servicios-1.png" width="600">
+</p>
 
 #### Comunicación con otros servicios (cliente en backend) ####
 
@@ -46,8 +52,9 @@ En el desarrollo de aplicaciones móviles o cualquiera que se ejecute en cliente
 
 En muchas ocasiones, la información que pedimos no ha cambiado, debido a que el simple hecho, de navegar en nuestra aplicación va a provocar constantes actualizaciones, probablemente innecesarias y pedirla al servidor nos va a robar rendimiento, conexión, tiempos de espera, posibles fallos, etcétera. Por tanto, por el bien de el rendimiento del servidor y de la experiencia de usuario es recomendable usarla en cliente también. Pero ojo, no se debe abusar de la cache en cliente, ya que un uso alto, sobrecargaría la memoria del navegador o aplicación móvil y ralentizaría todo, convirtiendo así, una mejora en un problema.
 
-
-
+<p align="center">
+  <img src="https://github.com/dcarvajal7/examples/blob/master/ionic4/assets/servicioscliente-1.png" width="600">
+</p>
 
 #### Cache de datos de login ####
 
@@ -55,7 +62,9 @@ Esta cache, no se construye para mejorar el rendimiento, si no para hacer login 
 
 Básicamente es guardar los datos de sesión en cache (encriptados) de manera que cuando entremos en la aplicación, no tengamos que hacer login de nuevo. Por supuesto, aquí sí que hay una llamada a un servicio que verifique si esos datos son correctos, si la sesión no ha expirado, etcétera. Pero se realiza de forma transparente para el usuario en segundo plano.
 
-
+<p align="center">
+  <img src="https://github.com/dcarvajal7/examples/blob/master/ionic4/assets/login.png" width="600">
+</p>
 
 #### Cache de usuario, por sesión o global ####
 En base a lo volátil que queramos que sea nuestra cache, necesitaremos que se guarde por usuario, por sesión o de manera global, hay veces que necesitamos que duren un tiempo determinado o se refresquen cuando realizamos una determinada acción (a parte de la actualización de datos):
@@ -64,7 +73,9 @@ Usuario, es una cache que se almacena mientras un usuario esté activo, en cualq
 Sesión, es muy parecida a la anterior, con la diferencia de que es posible que nuestra aplicación requiera de que con el mismo usuario, podamos mantener sesiones distintas e independientes, por lo tanto esta cache seguirá viva siempre y cuando la sesión en un único dispositivo este activa, es decir, si tenemos 2 dispositivos con el mismo usuario, tendremos 2 caches en el servidor, una por cada sesión. Por poner un ejemplo, se suele utilizar para formularios que se complementan en varios pasos y se deben rellenar obligatoriamente desde el mismo dispositivo o sí simplemente queremos que la cache sea más volátil porque nuestros datos están más ‘vivos’.
 Global, es una cache que aplica a todos los usuarios, con información que no suele cambiar y que se refrescará normalmente cuando pase el tiempo de expiración, todas deben tener ese tiempo, pero las anteriores no suelen cumplirlo si la aplicación se usa. Por ejemplo, siguiendo el ejemplo anterior, un listado de modelos disponibles de coches, es algo que cambia muy poco y es común para todos los usuarios, por lo tanto, este listado sería un gran candidato para almacenarse en una cache global.
 
-
+<p align="center">
+  <img src="https://github.com/dcarvajal7/examples/blob/master/ionic4/assets/usuariosesionglobal.png" width="600">
+</p>
 
 ## Conclusiones ##
 Dado que la aplicación de la cache, de la manera correcta, puede ser muy beneficioso en muchos aspectos, por ejemplo, en una web con información, los motores de búsqueda van a premiar las páginas más optimas en su búsqueda por la mejor experiencia de usuario o por nosotros mismos de ofrecer una aplicación que se pueda usar sin problemas o para que nuestro servidor no se sobrecargue o cualquiera de las buenas razones que hemos dado más arriba, mi recomendación es que debemos hacer uso de ella.
