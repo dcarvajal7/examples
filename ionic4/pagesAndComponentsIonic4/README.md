@@ -57,7 +57,8 @@ Se ha creado una nueva carpeta dentro de ‘app’ con 5 elementos nuevos y se h
 
 Adicionalmente, para que podamos ver nuestra página, vamos a incluir un enlace en la ‘Home’ usando Angular Router, aunque esto queda fuera del alcance de este artículo, home.page.ts quedaría así:
 
-`import { Component } from '@angular/core';
+```
+import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -72,12 +73,14 @@ export class HomePage {
   navigateToPet(){
     this.router.navigate(['/pet']);
   }
-}`
+}
+```
 
  
 Se ha añadido la importación de la librería de Route, se ha añadido al constructor el objeto Router y se ha creado el servicio navigateToPet(), al que tenemos que llamar desde la vista (home.page.html):
 
-`<ion-header>
+```
+<ion-header>
   <ion-toolbar>
     <ion-title>
       Ionic Blank
@@ -87,12 +90,13 @@ Se ha añadido la importación de la librería de Route, se ha añadido al const
 
 <ion-content>
     <ion-button color="primary" expand="full" (click)="navigateToPet()">Pet page</ion-button>
-</ion-content>`
-
+</ion-content>
+```
  
 Finalmente el fichero app-routing.module.ts quedaría así, con todas las páginas y rutas definidas en la constante ‘routes’:
 
-`import { NgModule } from '@angular/core';
+```
+import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
@@ -107,7 +111,8 @@ const routes: Routes = [
   ],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }`
+export class AppRoutingModule { }
+```
 
 Podemos probar lo que llevamos desarrollado utilizando de nuevo Ionic CLI:
 
@@ -139,8 +144,11 @@ Por supuesto, este es un ejemplo muy simple y en la practica es posible que no s
  
 Para crear nuestro primer componente usaremos el CLI de la siguiente forma:
  
-`ionic g module components
-ionic g component components/nombre --export`
+```
+ionic g module components
+ionic g component components/nombre --export
+```
+
 Lo que hemos hecho con estos dos comandos es crear primero un modulo nuevo, que va a contener todos los componentes que desarrollemos o qué queramos añadir en este módulo, podemos dimensionarlo/dividirlo como más nos convenga en un solo módulo o varios. Así podremos llevarnos nuestro módulo a la página que queramos y utilizar sus componentes o bien publicarlo a nivel global.
 
 Para nosotros en este artículo bastará con un solo módulo con nuestro componente y lo añadiremos en cada página para poder utilizarlo.
@@ -163,7 +171,8 @@ Esta vez tenemos un modulo nuevo ‘components’ cuya configuración se estable
 
 Lo que debemos hacer primero, es adaptar nuestro components.module.ts, necesitamos que exporte el componente cuando incluyamos este modulo en las demás páginas o módulos, únicamente tenemos que declarar y exportar NombreComponent en @NgModule:
 
-`import { NgModule } from '@angular/core';
+```
+import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NombreComponent } from './nombre/nombre.component';
 
@@ -175,7 +184,9 @@ import { NombreComponent } from './nombre/nombre.component';
   ],
   exports: [NombreComponent],
 })
-export class ComponentsModule { }`
+export class ComponentsModule { }
+```
+
 
  
 @NgModule se utiliza para declarar todo lo que hemos creado, en él, podemos definir varios parámetros:
@@ -186,12 +197,16 @@ imports – Las importaciones que necesitemos cómo por ejemplo; módulos que im
 exports – Si estamos definiendo un componente, necesitamos agregarlo aquí para que se pueda utilizar fuera.
 Ahora vamos a modificar nombre.component.html para añadir un label y una variable que va a contener el nombre de la mascota o el dueño en función de donde estemos:
 
-`<p>
+```
+<p>
   Nombre: {{nombre}}
-</p>`
+</p>
+```
+
 Para que esa variable venga dada por cada página, necesitamos hacer uso de @Input, gracias a este decorador podemos pasar atributos externos a la lógica de nuestro componente y, de esta forma, estableceremos qué la variable ‘nombre’ se cargue con el valor del parámetro de entrada :
 
-`import { Component, Input , OnInit } from '@angular/core';
+```
+import { Component, Input , OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-nombre',
@@ -206,12 +221,13 @@ export class NombreComponent implements OnInit {
 
   ngOnInit() {}
 
-}`
-
+}
+```
  
 Ya únicamente nos faltaría incluir nuestro modulo en las distintas páginas para poder usarlo, primero en cada modulo y luego en el html:
 
-`import { NgModule } from '@angular/core';
+```
+import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
@@ -237,11 +253,14 @@ const routes: Routes = [
   ],
   declarations: [PetPage]
 })
-export class PetPageModule {}`
+export class PetPageModule {}
+```
+
 
 Simplemente bastará con importar ComponentsModule en el módulo de nuestra página para poder utilizar cualquiera de los componentes que lo componen, en nuestro caso solo tenemos uno. Aquí entra ya la habilidad para estructurar nuestro árbol de componentes, por ejemplo, podemos definir un modulo de componentes básico para formularios, otro para vistas, etcétera.
 
-`<ion-header>
+```
+<ion-header>
   <ion-toolbar>
     <ion-title>pet</ion-title>
   </ion-toolbar>
@@ -249,7 +268,8 @@ Simplemente bastará con importar ComponentsModule en el módulo de nuestra pág
 
 <ion-content>
     <app-nombre nombre="Asia"></app-nombre>
-</ion-content>`
+</ion-content>
+```
 
 La forma de incluir el componente en la vista es muy fácil, solo debemos incluirlo con el nombre definido en el parámetro selector (dentro de @component) como una etiqueta HTML más. Cada @Input es un parámetro de entrada al componente y se establecen como los atributos a los que estamos acostumbrados en HTML (por ejemplo atributo ‘class’ de un ‘div’).
 
