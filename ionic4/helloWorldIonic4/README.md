@@ -24,6 +24,10 @@ Existe una capa por encima de Cordova (o Capacitor) y por debajo de Ionic para l
 
 Por supuesto, Angular esta orientado a plataformas web y ahí es donde entra en juego Ionic, que además de muchas funcionalidades como framework y plataforma de desarrollo, nos aporta una adaptación de Angular a ‘mobile’, con posibilidad de adaptar el diseño a los estándares nativos de Android o iOS entre otros.
 
+<p align="center">
+  <img src="https://github.com/dcarvajal7/examples/blob/master/ionic4/assets/ionic-architecture-new.png" width="600">
+</p>
+
 ## Nuestra primera aplicación Ionic 4 ##
 Lo primero es instalarnos nodejs, que es un entorno de ejecución para JavaScript construido con el motor de JavaScript V8 de Chrome, para ello visita https://nodejs.org/ y sigue las instrucciones para instalar su última versión. Es importante que os familiaricéis con el entorno de node y su ejecución en linea de comando, podéis buscar más información en internet ya que quedaría fuera del alcance de este artículo.
 
@@ -44,6 +48,10 @@ Una vez instalado, procederemos a crear nuestra primera aplicación:
 * type es el framework web que vamos a utilizar, como hemos comentado antes, a partir de Ionic 4, no quedamos atado a un framework base y podemos utilizar cualquiera de los permitidos o incluso ninguno.
 
 El CLI de Ionic nos genera un esqueleto con la siguiente estructura:
+
+<p align="center">
+  <img src="https://github.com/dcarvajal7/examples/blob/master/ionic4/assets/Captura.png" width="300">
+</p>
 
 ¿Qué elementos importantes tenemos en la estructura? A groso modo podemos ver:
 
@@ -81,7 +89,13 @@ O si lo preferís con el comando de instalación:
 Aquí una comparativa de las 2 ejecuciones:
 
 Hello world con ‘ionic serve’
+<p align="center">
+  <img src="https://github.com/dcarvajal7/examples/blob/master/ionic4/assets/Captura.png" width="300">
+</p>
 Hello world con ‘ionic serve –lab’
+<p align="center">
+  <img src="https://github.com/dcarvajal7/examples/blob/master/ionic4/assets/Captura2-1024x515.png" width="300">
+</p>
 
 Como veis Ionic CLI nos facilita muchísimo las cosas, podemos crear paginas, servicios y componentes con el entre otras cosas, ejecutar nuestra aplicación, etcétera.
 
