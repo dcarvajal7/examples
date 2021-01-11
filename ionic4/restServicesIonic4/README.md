@@ -8,8 +8,9 @@ Dado que las ventajas de mantener una aplicación backend en un servidor remoto,
 
 Los servicios en una aplicación híbrida suelen ser muy comunes, ya que no disponen de toda la potencia que una aplicación nativa y entre otras características, debe servirse de un servidor remoto para ejecutar la lógica más compleja, además de mantener la información centralizada y disponible siempre en cualquier dispositivo, poder compartir esa información con otros usuarios, incluso poder utilizarla en común, ya que esto, con toda la información repartida en dispositivos seria mucho más difícil.
 
-
-
+<p align="center">
+  <img src="https://github.com/dcarvajal7/examples/blob/master/ionic4/assets/servicios-rest-diagrama-2.png" width="600">
+</p>
 
 ## Servicios REST ##
 Para poder utilizar un cliente HTTP, debemos tener claro primero que son los servicios REST. El concepto es muy sencillo, es un protocolo de intercambio de información de forma síncrona. Algunos conceptos de cómo debe ser una API (Application Programming Interface) REST (Representational State Transfer):
@@ -23,7 +24,9 @@ Para poder utilizar un cliente HTTP, debemos tener claro primero que son los ser
 * Clientes en cualquier sistema / lenguaje: Otra de las ventajas de los servicios REST es que todos los lenguajes y sistemas disponen de un cliente que se pueda nutrir de estos servicios.
 * jSON: Es un lenguaje de marcado muy sencillo para el intercambio de datos y con un uso muy extendido. Soportan 2 estructuras; clave-valor que se puede anidar y array de datos. Se puede representar cualquier objeto valiéndose de estas 2 estructuras. Además es bastante mas sencillo que XML (su mayor competidor).
 
-
+<p align="center">
+  <img src="https://github.com/dcarvajal7/examples/blob/master/ionic4/assets/servicios-rest-diagrama.png" width="600">
+</p>
 
 ## Cliente Http ##
 ### Creando la base de nuestra aplicación ###
@@ -49,8 +52,9 @@ ionic g service services/album
 ```
 Con esto ya ha quedado definida la estructura necesaria para nuestro ejemplo:
 
-
-
+<p align="center">
+  <img src="https://github.com/dcarvajal7/examples/blob/master/ionic4/assets/Captura-de-pantalla-2019-10-21-a-las-21.59.23.png" width="600">
+</p>
 
 ### Creando las rutas necesarias para las páginas generadas ###
 Ahora necesitamos ‘enrutar’ nuestro homepage hacia el listado de álbumes y obviar el home que se ha creado de forma automática (podemos borrarlo si queremos). Para ello editamos app-routing.module.ts:
@@ -177,8 +181,9 @@ export class AlbumsPage implements OnInit {
 }
 ```
 
-
-
+<p align="center">
+  <img src="https://github.com/dcarvajal7/examples/blob/master/ionic4/assets/Captura-de-pantalla-2019-10-22-a-las-22.34.30-579x1024.png" width="600">
+</p>
 
 album.page.ts
 
@@ -214,8 +219,9 @@ En este caso, por cambiar y ampliar un poco el alcance de este artículo, vamos 
 
 El constructor se ejecuta cuando se instancia el componente y ngOnInit se ejecuta una vez se instancia todo. He de decir que, es mejor practica llamar a servicios de inicio en ngOnInit debido a que el constructor se suele utilizar para la inicialización de los campos a los valores por defecto.
 
-
-
+<p align="center">
+  <img src="https://github.com/dcarvajal7/examples/blob/master/ionic4/assets/Captura-de-pantalla-2019-10-22-a-las-22.34.30-579x1024.png" width="600">
+</p>
 
 Ahora toca modificar las vistas para listar los elementos y posteriormente el detalle:
 
@@ -257,8 +263,9 @@ albums.page.html
 ```
 Con *ngIf valoramos si tiene valor el objeto y si lo tiene lo pintamos en un card con {{information.title}}.
 
-
-
+<p align="center">
+  <img src="https://github.com/dcarvajal7/examples/blob/master/ionic4/assets/Oct-22-2019-22-30-22.gif" width="600">
+</p>
 
 ## Conclusiones ##
 No cegarse en meterlo todo en servicios , menos cuando estamos hablando de aplicaciones móviles donde en ocasiones tendremos problemas de conectividad. Lo ideal es balancear entre operaciones funciónales que se puedan realizar en cliente, sin problemas de rendimiento (normalmente las enfocadas a vistas) y operaciones más pesadas relacionadas con la lógica de negocio en servidor. 
