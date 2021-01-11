@@ -53,7 +53,7 @@ ionic g service services/album
 Con esto ya ha quedado definida la estructura necesaria para nuestro ejemplo:
 
 <p align="center">
-  <img src="https://github.com/dcarvajal7/examples/blob/master/ionic4/assets/Captura-de-pantalla-2019-10-21-a-las-21.59.23.png" width="600">
+  <img src="https://github.com/dcarvajal7/examples/blob/master/ionic4/assets/Captura-de-pantalla-2019-10-21-a-las-21.59.23.png" width="300">
 </p>
 
 ### Creando las rutas necesarias para las páginas generadas ###
@@ -181,10 +181,6 @@ export class AlbumsPage implements OnInit {
 }
 ```
 
-<p align="center">
-  <img src="https://github.com/dcarvajal7/examples/blob/master/ionic4/assets/Captura-de-pantalla-2019-10-22-a-las-22.34.30-579x1024.png" width="600">
-</p>
-
 album.page.ts
 
 ```
@@ -220,7 +216,7 @@ En este caso, por cambiar y ampliar un poco el alcance de este artículo, vamos 
 El constructor se ejecuta cuando se instancia el componente y ngOnInit se ejecuta una vez se instancia todo. He de decir que, es mejor practica llamar a servicios de inicio en ngOnInit debido a que el constructor se suele utilizar para la inicialización de los campos a los valores por defecto.
 
 <p align="center">
-  <img src="https://github.com/dcarvajal7/examples/blob/master/ionic4/assets/Captura-de-pantalla-2019-10-22-a-las-22.34.30-579x1024.png" width="600">
+  <img src="https://github.com/dcarvajal7/examples/blob/master/ionic4/assets/Captura-de-pantalla-2019-10-22-a-las-22.34.30-579x1024.png" width="300">
 </p>
 
 Ahora toca modificar las vistas para listar los elementos y posteriormente el detalle:
@@ -264,7 +260,7 @@ albums.page.html
 Con *ngIf valoramos si tiene valor el objeto y si lo tiene lo pintamos en un card con {{information.title}}.
 
 <p align="center">
-  <img src="https://github.com/dcarvajal7/examples/blob/master/ionic4/assets/Oct-22-2019-22-30-22.gif" width="600">
+  <img src="https://github.com/dcarvajal7/examples/blob/master/ionic4/assets/Oct-22-2019-22-30-22.gif" width="300">
 </p>
 
 ## Conclusiones ##
