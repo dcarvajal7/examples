@@ -131,7 +131,7 @@ Diría que necesitamos un botón back para volver ¿no?, esta utilidad es muy f�
 Tenemos muchas opciones de configuración, en la documentación oficial podéis ver algunas. Es importante remarcar, el gran trabajo que hay en la construcción de este framework con detalles tan importantes como que si usamos el ‘back button’ sin ‘customizar’, dependiendo del sistema donde se este ejecutando nuestra aplicación, aparece el botón nativo de cada sistema:
 
 <p align="center">
-  <img src="https://github.com/dcarvajal7/examples/blob/master/ionic4/assets/back-button.gif" width="200">
+  <img src="https://github.com/dcarvajal7/examples/blob/master/ionic4/assets/back-button.gif" width="400">
 </p>
 
 ## Pasando parámetros entre páginas con Angular Router ##
